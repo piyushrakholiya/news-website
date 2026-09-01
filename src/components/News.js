@@ -28,6 +28,7 @@ export class News extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps.category !== this.props.category) {
       this.setState({ nextPage: null });
+      window.scrollTo(0,0);
       this.fetchNews();
     }
   }
